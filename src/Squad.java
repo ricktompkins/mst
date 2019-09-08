@@ -21,13 +21,9 @@ public class Squad {
         return this.squadName + ": " + Arrays.toString(squadMembers);
     }
 
-    public String getSquadName() {
-
-        return this.squadName;
-    }
 
     public boolean isMember(Superhero otherHero) {
-        for(int i = 0; i < numHeroes; i++){
+        for(int i = 0; i < numHeroes; i++){             // uses a for loop instead of the for each due to the nulls in the array
             if(squadMembers[i].equals(otherHero)){
                 return true;
             }
